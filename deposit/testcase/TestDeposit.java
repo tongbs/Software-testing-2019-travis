@@ -54,7 +54,7 @@ public class TestDeposit {
 		// 利率都是5%
 
 		// when...
-		double expected = 198178. * (Math.pow(1 + 0.05, 20));
+		double expected = 18000. * (Math.pow(1 + 0.05, 20));
 		when(userA.depositAmount()).thenReturn(18000);
 		when(userA.depositInterest(anyInt())).thenReturn(0.05);
 		when(userA.expireEra()).thenReturn("平成");
@@ -71,9 +71,9 @@ public class TestDeposit {
 		// 利率都是10%
 
 		// when...
-		double expected = 198178. * (Math.pow(1 + 0.1, 8));
+		double expected = 40000. * (Math.pow(1 + 0.10, 8));
 		when(userA.depositAmount()).thenReturn(40000);
-		when(userA.depositInterest(anyInt())).thenReturn(0.1);
+		when(userA.depositInterest(anyInt())).thenReturn(0.10);
 		when(userA.expireEra()).thenReturn("昭和");
 		when(userA.expireYear()).thenReturn(20);
 		
